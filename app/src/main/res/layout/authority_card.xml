@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:strokeColor="#E6DED6"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp">
+
+        <!-- Authority Icon -->
+        <ImageView
+            android:id="@+id/imgAuthority"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="14dp"
+            android:background="#F5F2EE"
+            android:padding="9dp"
+            android:src="@drawable/ic_police"/>
+
+        <!-- Text Area -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAuthorityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balai Polis Shah Alam"
+                android:textColor="#222222"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvAuthorityType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Police"
+                android:textColor="#7A7A7A"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tvAuthorityDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="1.20 km"
+                android:textColor="#9E9E9E"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Call Button -->
+        <ImageButton
+            android:id="@+id/btnCall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_phone_circle"
+            android:padding="12dp"
+            android:src="@drawable/ic_phone"
+            android:contentDescription="Call"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

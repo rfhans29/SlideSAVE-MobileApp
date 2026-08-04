@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
     namespace 'com.example.slidesave'
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.slidesave"
@@ -26,6 +28,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -34,7 +39,30 @@ dependencies {
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
+
+    implementation libs.firebase.database
+    implementation libs.firebase.auth
+
+    implementation libs.credentials
+    implementation libs.credentials.play.services.auth
+    implementation libs.googleid
+
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+
+    implementation libs.play.services.maps
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
+    implementation 'com.android.volley:volley:1.2.1'
+
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+    implementation 'com.google.android.material:material:1.12.0'
+
+    implementation "androidx.room:room-runtime:2.6.1"
+    annotationProcessor "androidx.room:room-compiler:2.6.1"
+    implementation "androidx.room:room-common:2.6.1"
+
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
 }

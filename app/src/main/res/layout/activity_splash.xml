@@ -4,8 +4,11 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@color/white">
+
     <ImageView
-        android:src="@drawable/LogoSlideSAVE"
+        android:src="@drawable/slidesave_logo"
         android:layout_width="150dp"
         android:layout_height="150dp" />
+
 </RelativeLayout>
+
